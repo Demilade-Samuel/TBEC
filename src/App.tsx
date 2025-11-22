@@ -236,7 +236,7 @@ function App() {
               </p>
               <div className="bg-cyan-50 border-l-4 border-cyan-500 p-6 rounded-lg">
                 <p className="text-blue-900 font-semibold italic">
-                  "I am committed to ensuring that the cognitive, affective, and psychomotor capabilities of every child are skillfully shepherded, leading to all-round excellent academic performance."
+                  "I am committed to ensuring that the cognitive, affective, and psychomotor capabilities of every child are skillfully shepherded, leading to all-round excellent educational performance."
                 </p>
                 <p className="text-cyan-700 font-medium mt-2">- Teacher Alice Salami</p>
               </div>
@@ -302,7 +302,7 @@ function App() {
                     Vision Statement
                   </h3>
                   <p className="text-lg text-gray-700 leading-relaxed">
-                    We are on assignment to ensure that the Cognitive, Affective and Psychomotor capabilities of every child between the ages 3-6 years old are skillfully sharpened thereby leading to all-round excellent academic performance.
+                    We are on assignment to ensure that the Cognitive, Affective and Psychomotor capabilities of every child between the ages 3-6 years old are skillfully sharpened thereby leading to all-round excellent educational performance.
                   </p>
                 </div>
               </div>
@@ -344,7 +344,7 @@ function App() {
               </div>
               <h3 className="text-3xl font-bold text-blue-900 mb-4">Private Consultation</h3>
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                One-on-one sessions tailored to your child's specific challenges. Get personalized attention and customized learning plans that address reading, writing, or speech difficulties.
+                One-on-one sessions tailored to your child's specific challenges. Get personalized attention and customized learning plans that target reading, writing, or speech difficulties.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-center text-gray-700">
@@ -399,7 +399,7 @@ function App() {
               Why Choose TBEC?
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              TBEC is your best shot for securing your child's academic excellence
+              TBEC is your best shot for securing your child's educational excellence
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -482,7 +482,7 @@ function App() {
                     </div>
                     <div>
                       <p className="font-semibold">Location</p>
-                      <p className="text-blue-100">Visit us for address details</p>
+                      <p className="text-blue-100">Visit us for location details</p>
                     </div>
                   </div>
                 </div>
@@ -508,7 +508,7 @@ function App() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">Email Address</label>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">Your Email</label>
                   <input
                     type="email"
                     required
