@@ -157,7 +157,7 @@ function App() {
             Get Started Today
           </a>
 
-          {/* Ages Badge */}
+          {/* Age Range Display */}
           <div className="bg-white/10 backdrop-blur text-white px-6 py-4 rounded-2xl text-center mt-4">
             <p className="text-sm font-semibold opacity-90">Serving Ages</p>
             <p className="text-3xl font-bold">3 - 6 Years</p>
@@ -245,12 +245,12 @@ function App() {
         </div>
       </section>
 
-      {/* Challenges We Address */}
+      {/* Our Focus Areas */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-cyan-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
-              Challenges We Address
+              Challenges We Solve
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               TBEC specializes in helping children overcome these common learning obstacles
