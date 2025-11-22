@@ -1,0 +1,24 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="1200" fill="#F0F9FF"/>
+
+  <!-- Decorative circles -->
+  <circle cx="200" cy="200" r="150" fill="#FED7AA" opacity="0.3"/>
+  <circle cx="1000" cy="300" r="120" fill="#A5F3FC" opacity="0.3"/>
+  <circle cx="900" cy="900" r="180" fill="#FEF08A" opacity="0.3"/>
+  <circle cx="300" cy="1000" r="100" fill="#93C5FD" opacity="0.3"/>
+
+  <!-- TBEC Letters -->
+  <text x="600" y="680" font-family="Arial, sans-serif" font-size="400" font-weight="bold" text-anchor="middle">
+    <tspan fill="#F97316">T</tspan><tspan fill="#FCD34D">B</tspan><tspan fill="#06B6D4">E</tspan><tspan fill="#1E3A8A">C</tspan>
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="820" font-family="Arial, sans-serif" font-size="48" font-weight="600" fill="#1E3A8A" text-anchor="middle">
+    The Balanced Educational Citadel
+  </text>
+
+  <!-- Tagline -->
+  <text x="600" y="900" font-family="Arial, sans-serif" font-size="36" fill="#0369A1" text-anchor="middle">
+    Ages 3-6 • Early Learning Excellence
+  </text>
+</svg>
