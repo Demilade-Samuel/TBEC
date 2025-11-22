@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { BookOpen, Pencil, MessageCircle, Target, Eye, Users, GraduationCap, Heart, Star, Phone, Mail, MapPin } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { BookOpen, Pencil, MessageCircle, Target, Eye, Users, GraduationCap, Heart, Star, Phone, Mail, MapPin, Menu, X } from 'lucide-react';
 
 function App() {
   const [formData, setFormData] = useState({
@@ -8,6 +8,22 @@ function App() {
     phone: '',
     message: ''
   });
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [mobileMenuOpen]);
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -39,12 +55,114 @@ function App() {
               <a href="#why-us" className="text-blue-900 hover:text-cyan-500 font-medium transition">Why TBEC</a>
               <a href="#contact" className="text-blue-900 hover:text-cyan-500 font-medium transition">Contact</a>
             </div>
-            <a href="#contact" className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition transform hover:scale-105">
-              Get Started
-            </a>
+            <div className="flex items-center space-x-4">
+              <a href="#contact" className="hidden sm:block bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition transform hover:scale-105">
+                Get Started
+              </a>
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="md:hidden bg-gradient-to-r from-cyan-500 to-blue-600 text-white p-3 rounded-xl hover:shadow-lg transition transform hover:scale-105"
+                aria-label="Toggle mobile menu"
+              >
+                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
           </div>
         </div>
       </nav>
+
+      {/* Mobile Menu Overlay */}
+      <div
+        className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-40 transition-opacity duration-300 md:hidden ${
+          mobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+        }`}
+        onClick={closeMobileMenu}
+      />
+
+      {/* Mobile Menu */}
+      <div
+        className={`fixed top-0 right-0 h-full w-full sm:w-80 bg-gradient-to-br from-cyan-500 via-blue-600 to-blue-900 z-50 transform transition-transform duration-300 ease-in-out md:hidden ${
+          mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      >
+        {/* Decorative Elements */}
+        <div className="absolute top-20 right-10 w-32 h-32 bg-orange-400 rounded-full opacity-20 blur-2xl"></div>
+        <div className="absolute bottom-20 left-10 w-40 h-40 bg-yellow-400 rounded-full opacity-20 blur-2xl"></div>
+
+        <div className="relative h-full flex flex-col p-8">
+          {/* Close Button */}
+          <button
+            onClick={closeMobileMenu}
+            className="absolute top-6 right-6 bg-white/20 backdrop-blur text-white p-3 rounded-xl hover:bg-white/30 transition"
+            aria-label="Close menu"
+          >
+            <X className="w-6 h-6" />
+          </button>
+
+          {/* Logo and Title */}
+          <div className="mb-12 mt-8">
+            <div className="flex items-center space-x-1 text-4xl font-bold mb-4">
+              <span className="text-orange-400">T</span>
+              <span className="text-yellow-400">B</span>
+              <span className="text-cyan-300">E</span>
+              <span className="text-white">C</span>
+            </div>
+            <p className="text-white font-semibold text-lg">The Balanced</p>
+            <p className="text-white font-semibold text-lg">Educational Citadel</p>
+          </div>
+
+          {/* Menu Links */}
+          <nav className="flex-1 flex flex-col space-y-2">
+            <a
+              href="#about"
+              onClick={closeMobileMenu}
+              className="flex items-center space-x-4 bg-white/10 backdrop-blur text-white px-6 py-4 rounded-2xl hover:bg-white/20 transition transform hover:scale-105 active:scale-95"
+            >
+              <Heart className="w-6 h-6" />
+              <span className="text-xl font-semibold">About Us</span>
+            </a>
+            <a
+              href="#services"
+              onClick={closeMobileMenu}
+              className="flex items-center space-x-4 bg-white/10 backdrop-blur text-white px-6 py-4 rounded-2xl hover:bg-white/20 transition transform hover:scale-105 active:scale-95"
+            >
+              <GraduationCap className="w-6 h-6" />
+              <span className="text-xl font-semibold">Services</span>
+            </a>
+            <a
+              href="#why-us"
+              onClick={closeMobileMenu}
+              className="flex items-center space-x-4 bg-white/10 backdrop-blur text-white px-6 py-4 rounded-2xl hover:bg-white/20 transition transform hover:scale-105 active:scale-95"
+            >
+              <Star className="w-6 h-6" />
+              <span className="text-xl font-semibold">Why TBEC</span>
+            </a>
+            <a
+              href="#contact"
+              onClick={closeMobileMenu}
+              className="flex items-center space-x-4 bg-white/10 backdrop-blur text-white px-6 py-4 rounded-2xl hover:bg-white/20 transition transform hover:scale-105 active:scale-95"
+            >
+              <Phone className="w-6 h-6" />
+              <span className="text-xl font-semibold">Contact</span>
+            </a>
+          </nav>
+
+          {/* Get Started Button */}
+          <a
+            href="#contact"
+            onClick={closeMobileMenu}
+            className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-5 rounded-2xl text-xl font-bold text-center hover:shadow-2xl transition transform hover:scale-105 active:scale-95 mt-8"
+          >
+            Get Started Today
+          </a>
+
+          {/* Ages Badge */}
+          <div className="bg-white/10 backdrop-blur text-white px-6 py-4 rounded-2xl text-center mt-4">
+            <p className="text-sm font-semibold opacity-90">Serving Ages</p>
+            <p className="text-3xl font-bold">3 - 6 Years</p>
+          </div>
+        </div>
+      </div>
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-cyan-50 via-blue-50 to-orange-50">
