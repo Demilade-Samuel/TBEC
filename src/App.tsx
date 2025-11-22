@@ -25,6 +25,15 @@ function App() {
     setMobileMenuOpen(false);
   };
 
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    closeMobileMenu();
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     alert('Thank you for reaching out! We will contact you soon.');
@@ -45,13 +54,13 @@ function App() {
               />
             </a>
             <div className="hidden md:flex space-x-8">
-              <a href="#about" className="text-blue-900 hover:text-cyan-500 font-medium transition">About</a>
-              <a href="#services" className="text-blue-900 hover:text-cyan-500 font-medium transition">Services</a>
-              <a href="#why-us" className="text-blue-900 hover:text-cyan-500 font-medium transition">Why TBEC</a>
-              <a href="#contact" className="text-blue-900 hover:text-cyan-500 font-medium transition">Contact</a>
+              <a href="#about" onClick={(e) => handleSmoothScroll(e, 'about')} className="text-blue-900 hover:text-cyan-500 font-medium transition">About</a>
+              <a href="#services" onClick={(e) => handleSmoothScroll(e, 'services')} className="text-blue-900 hover:text-cyan-500 font-medium transition">Services</a>
+              <a href="#why-us" onClick={(e) => handleSmoothScroll(e, 'why-us')} className="text-blue-900 hover:text-cyan-500 font-medium transition">Why TBEC</a>
+              <a href="#contact" onClick={(e) => handleSmoothScroll(e, 'contact')} className="text-blue-900 hover:text-cyan-500 font-medium transition">Contact</a>
             </div>
             <div className="flex items-center space-x-4">
-              <a href="#contact" className="hidden sm:block bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition transform hover:scale-105">
+              <a href="#contact" onClick={(e) => handleSmoothScroll(e, 'contact')} className="hidden sm:block bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition transform hover:scale-105">
                 Get Started
               </a>
               <button
@@ -107,7 +116,7 @@ function App() {
           <nav className="flex-1 flex flex-col space-y-2">
             <a
               href="#about"
-              onClick={closeMobileMenu}
+              onClick={(e) => handleSmoothScroll(e, 'about')}
               className="flex items-center space-x-4 bg-white/10 backdrop-blur text-white px-6 py-4 rounded-2xl hover:bg-white/20 transition transform hover:scale-105 active:scale-95"
             >
               <Heart className="w-6 h-6" />
@@ -115,7 +124,7 @@ function App() {
             </a>
             <a
               href="#services"
-              onClick={closeMobileMenu}
+              onClick={(e) => handleSmoothScroll(e, 'services')}
               className="flex items-center space-x-4 bg-white/10 backdrop-blur text-white px-6 py-4 rounded-2xl hover:bg-white/20 transition transform hover:scale-105 active:scale-95"
             >
               <GraduationCap className="w-6 h-6" />
@@ -123,7 +132,7 @@ function App() {
             </a>
             <a
               href="#why-us"
-              onClick={closeMobileMenu}
+              onClick={(e) => handleSmoothScroll(e, 'why-us')}
               className="flex items-center space-x-4 bg-white/10 backdrop-blur text-white px-6 py-4 rounded-2xl hover:bg-white/20 transition transform hover:scale-105 active:scale-95"
             >
               <Star className="w-6 h-6" />
@@ -131,7 +140,7 @@ function App() {
             </a>
             <a
               href="#contact"
-              onClick={closeMobileMenu}
+              onClick={(e) => handleSmoothScroll(e, 'contact')}
               className="flex items-center space-x-4 bg-white/10 backdrop-blur text-white px-6 py-4 rounded-2xl hover:bg-white/20 transition transform hover:scale-105 active:scale-95"
             >
               <Phone className="w-6 h-6" />
@@ -142,7 +151,7 @@ function App() {
           {/* Get Started Button */}
           <a
             href="#contact"
-            onClick={closeMobileMenu}
+            onClick={(e) => handleSmoothScroll(e, 'contact')}
             className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-5 rounded-2xl text-xl font-bold text-center hover:shadow-2xl transition transform hover:scale-105 active:scale-95 mt-8"
           >
             Get Started Today
@@ -175,10 +184,10 @@ function App() {
                 Building a strong foundation through fun and learning for children ages 3-6 years old
               </p>
               <div className="flex flex-wrap gap-4">
-                <a href="#contact" className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-full text-lg font-bold hover:shadow-2xl transition transform hover:scale-105">
+                <a href="#contact" onClick={(e) => handleSmoothScroll(e, 'contact')} className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-full text-lg font-bold hover:shadow-2xl transition transform hover:scale-105">
                   Enroll Now
                 </a>
-                <a href="#about" className="bg-white text-blue-900 border-2 border-blue-900 px-8 py-4 rounded-full text-lg font-bold hover:bg-blue-900 hover:text-white transition transform hover:scale-105">
+                <a href="#about" onClick={(e) => handleSmoothScroll(e, 'about')} className="bg-white text-blue-900 border-2 border-blue-900 px-8 py-4 rounded-full text-lg font-bold hover:bg-blue-900 hover:text-white transition transform hover:scale-105">
                   Learn More
                 </a>
               </div>
@@ -561,10 +570,10 @@ function App() {
             <div>
               <h4 className="font-bold text-lg mb-4">Quick Links</h4>
               <ul className="space-y-2 text-blue-200">
-                <li><a href="#about" className="hover:text-cyan-400 transition">About Us</a></li>
-                <li><a href="#services" className="hover:text-cyan-400 transition">Services</a></li>
-                <li><a href="#why-us" className="hover:text-cyan-400 transition">Why TBEC</a></li>
-                <li><a href="#contact" className="hover:text-cyan-400 transition">Contact</a></li>
+                <li><a href="#about" onClick={(e) => handleSmoothScroll(e, 'about')} className="hover:text-cyan-400 transition">About Us</a></li>
+                <li><a href="#services" onClick={(e) => handleSmoothScroll(e, 'services')} className="hover:text-cyan-400 transition">Services</a></li>
+                <li><a href="#why-us" onClick={(e) => handleSmoothScroll(e, 'why-us')} className="hover:text-cyan-400 transition">Why TBEC</a></li>
+                <li><a href="#contact" onClick={(e) => handleSmoothScroll(e, 'contact')} className="hover:text-cyan-400 transition">Contact</a></li>
               </ul>
             </div>
             <div>
