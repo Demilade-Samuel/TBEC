@@ -37,18 +37,13 @@ function App() {
       <nav className="fixed top-0 w-full bg-white shadow-md z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            <div className="flex items-center space-x-3">
-              <div className="flex items-center space-x-1 text-3xl font-bold">
-                <span className="text-orange-500">T</span>
-                <span className="text-yellow-500">B</span>
-                <span className="text-cyan-500">E</span>
-                <span className="text-blue-900">C</span>
-              </div>
-              <div className="hidden md:block">
-                <p className="text-blue-900 font-semibold text-sm">The Balanced</p>
-                <p className="text-blue-900 font-semibold text-sm">Educational Citadel</p>
-              </div>
-            </div>
+            <a href="#" className="flex items-center">
+              <img
+                src="/cpy-tbec4-removebg-preview.png"
+                alt="TBEC Logo"
+                className="h-14 w-auto hover:scale-105 transition-transform duration-200"
+              />
+            </a>
             <div className="hidden md:flex space-x-8">
               <a href="#about" className="text-blue-900 hover:text-cyan-500 font-medium transition">About</a>
               <a href="#services" className="text-blue-900 hover:text-cyan-500 font-medium transition">Services</a>
@@ -99,16 +94,13 @@ function App() {
             <X className="w-6 h-6" />
           </button>
 
-          {/* Logo and Title */}
+          {/* Logo */}
           <div className="mb-12 mt-8">
-            <div className="flex items-center space-x-1 text-4xl font-bold mb-4">
-              <span className="text-orange-400">T</span>
-              <span className="text-yellow-400">B</span>
-              <span className="text-cyan-300">E</span>
-              <span className="text-white">C</span>
-            </div>
-            <p className="text-white font-semibold text-lg">The Balanced</p>
-            <p className="text-white font-semibold text-lg">Educational Citadel</p>
+            <img
+              src="/cpy-tbec4-removebg-preview.png"
+              alt="TBEC Logo"
+              className="h-20 w-auto"
+            />
           </div>
 
           {/* Menu Links */}
@@ -556,12 +548,11 @@ function App() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <div className="flex items-center space-x-1 text-3xl font-bold mb-4">
-                <span className="text-orange-500">T</span>
-                <span className="text-yellow-500">B</span>
-                <span className="text-cyan-500">E</span>
-                <span className="text-white">C</span>
-              </div>
+              <img
+                src="/cpy-tbec4-removebg-preview.png"
+                alt="TBEC Logo"
+                className="h-12 w-auto mb-4"
+              />
               <p className="text-blue-200 mb-2 font-semibold">The Balanced Educational Citadel</p>
               <p className="text-blue-300 text-sm">
                 Securing excellence in young children between the ages of 3-6 years old
