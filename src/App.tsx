@@ -595,7 +595,7 @@ function App() {
             </div>
           </div>
           <div className="border-t border-blue-800 pt-8 text-center text-blue-300">
-            <p>&copy; 2024 The Balanced Educational Citadel (TBEC). All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} The Balanced Educational Citadel (TBEC). All rights reserved.</p>
             <p className="mt-2 text-sm">Empowering young minds for a brighter future.</p>
           </div>
         </div>
