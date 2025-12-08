@@ -479,13 +479,18 @@ function App() {
                       <p className="text-blue-100">info@tbec.edu</p>
                     </div>
                   </div>
-                  <div className="flex items-center space-x-4">
-                    <div className="bg-yellow-500 p-3 rounded-xl">
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-yellow-500 p-3 rounded-xl flex-shrink-0">
                       <MapPin className="w-6 h-6" />
                     </div>
-                    <div>
-                      <p className="font-semibold">Location</p>
-                      <p className="text-blue-100">Visit us for location details</p>
+                    <div className="flex-1">
+                      <p className="font-semibold mb-2">Location</p>
+                      <p className="text-blue-100 mb-3 leading-relaxed">
+                        We run a fully remote system, physical classes can be arranged when necessary
+                      </p>
+                      <button className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:shadow-lg transition transform hover:scale-105">
+                        Read More
+                      </button>
                     </div>
                   </div>
                 </div>
