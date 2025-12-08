@@ -181,7 +181,7 @@ function App() {
                 <br />
                 <span className="text-orange-500">Big Possibilities</span>
               </h1>
-              <p className="text-xl text-blue-800 leading-relaxed text-justify">
+              <p className="text-xl text-blue-800 leading-relaxed text-left md:text-justify">
                 Building a strong foundation through fun and learning for children ages 3-6 years old
               </p>
               <div className="flex flex-wrap gap-4">
@@ -229,10 +229,10 @@ function App() {
               <h2 className="text-4xl md:text-5xl font-bold text-blue-900">
                 Teacher Alice Salami
               </h2>
-              <p className="text-lg text-gray-700 leading-relaxed text-justify">
+              <p className="text-lg text-gray-700 leading-relaxed text-left md:text-justify">
                 A passionate educator with nearly a decade of experience, Teacher Alice has dedicated her life to helping children overcome learning challenges. Her journey began when she discovered that many pupils struggled with reading, writing, and speech impediments despite attending expensive schools.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed text-justify">
+              <p className="text-lg text-gray-700 leading-relaxed text-left md:text-justify">
                 This discovery sparked a special calling in her spirit—to provide real solutions for children between the ages of 3 and 6 years old. TBEC was born from this mission.
               </p>
               <div className="bg-cyan-50 border-l-4 border-cyan-500 p-6 rounded-lg">
@@ -253,7 +253,7 @@ function App() {
             <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
               Challenges We Solve
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto text-justify">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto text-left md:text-justify">
               TBEC specializes in helping children overcome these common learning obstacles
             </p>
           </div>
@@ -263,7 +263,7 @@ function App() {
                 <BookOpen className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-blue-900 mb-4">Reading Difficulties</h3>
-              <p className="text-gray-700 leading-relaxed text-justify">
+              <p className="text-gray-700 leading-relaxed text-left md:text-justify">
                 We help children develop strong reading skills through proven methods and personalized attention, building confidence one word at a time.
               </p>
             </div>
@@ -272,7 +272,7 @@ function App() {
                 <Pencil className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-blue-900 mb-4">Writing Challenges</h3>
-              <p className="text-gray-700 leading-relaxed text-justify">
+              <p className="text-gray-700 leading-relaxed text-left md:text-justify">
                 Our specialized techniques help children master writing skills, from proper grip to confident expression of their thoughts on paper.
               </p>
             </div>
@@ -281,7 +281,7 @@ function App() {
                 <MessageCircle className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-blue-900 mb-4">Speech Impediment</h3>
-              <p className="text-gray-700 leading-relaxed text-justify">
+              <p className="text-gray-700 leading-relaxed text-left md:text-justify">
                 We provide supportive environments and expert guidance to help children overcome speech challenges and communicate clearly.
               </p>
             </div>
@@ -302,7 +302,7 @@ function App() {
                   <h3 className="text-3xl font-bold text-blue-900 mb-4">
                     Vision Statement
                   </h3>
-                  <p className="text-lg text-gray-700 leading-relaxed text-justify">
+                  <p className="text-lg text-gray-700 leading-relaxed text-left md:text-justify">
                     We are on assignment to ensure that the Cognitive, Affective and Psychomotor capabilities of every child between the ages 3-6 years old are skillfully sharpened thereby leading to all-round excellent educational performance.
                   </p>
                 </div>
@@ -317,7 +317,7 @@ function App() {
                   <h3 className="text-3xl font-bold text-blue-900 mb-4">
                     Mission Statement
                   </h3>
-                  <p className="text-lg text-gray-700 leading-relaxed text-justify">
+                  <p className="text-lg text-gray-700 leading-relaxed text-left md:text-justify">
                     We are committed to employing current educational methodology in the dissemination of quality knowledge to our clients.
                   </p>
                 </div>
@@ -334,7 +334,7 @@ function App() {
             <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
               Our Services
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto text-justify">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto text-left md:text-justify">
               We offer flexible options to meet your child's unique needs
             </p>
           </div>
@@ -344,7 +344,7 @@ function App() {
                 <Users className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-3xl font-bold text-blue-900 mb-4">Private Consultation</h3>
-              <p className="text-lg text-gray-700 leading-relaxed mb-6 text-justify">
+              <p className="text-lg text-gray-700 leading-relaxed mb-6 text-left md:text-justify">
                 One-on-one sessions tailored to your child's specific challenges. Get personalized attention and customized learning plans that target reading, writing, or speech difficulties.
               </p>
               <ul className="space-y-3">
@@ -367,7 +367,7 @@ function App() {
                 <GraduationCap className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-3xl font-bold text-blue-900 mb-4">School Enrollment</h3>
-              <p className="text-lg text-gray-700 leading-relaxed mb-6 text-justify">
+              <p className="text-lg text-gray-700 leading-relaxed mb-6 text-left md:text-justify">
                 Full immersion in our specialized educational environment. Join our community of learners where every child receives the attention they deserve in a fun, nurturing setting.
               </p>
               <ul className="space-y-3">
@@ -399,7 +399,7 @@ function App() {
             <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
               Why Choose TBEC?
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto text-justify">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto text-left md:text-justify">
               TBEC is your best shot for securing your child's educational excellence
             </p>
           </div>
@@ -420,19 +420,19 @@ function App() {
             <div className="space-y-6 order-1 md:order-2">
               <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
                 <h4 className="text-xl font-bold text-blue-900 mb-2">Nearly a Decade of Experience</h4>
-                <p className="text-gray-700 text-justify">Teacher Alice brings years of expertise in early childhood education and special needs learning.</p>
+                <p className="text-gray-700 text-left md:text-justify">Teacher Alice brings years of expertise in early childhood education and special needs learning.</p>
               </div>
               <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
                 <h4 className="text-xl font-bold text-blue-900 mb-2">Proven Methods</h4>
-                <p className="text-gray-700 text-justify">We employ recent and proven educational methods designed specifically for children ages 3-6.</p>
+                <p className="text-gray-700 text-left md:text-justify">We employ recent and proven educational methods designed specifically for children ages 3-6.</p>
               </div>
               <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
                 <h4 className="text-xl font-bold text-blue-900 mb-2">Holistic Development</h4>
-                <p className="text-gray-700 text-justify">We focus on cognitive, affective, and psychomotor development for well-rounded growth.</p>
+                <p className="text-gray-700 text-left md:text-justify">We focus on cognitive, affective, and psychomotor development for well-rounded growth.</p>
               </div>
               <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
                 <h4 className="text-xl font-bold text-blue-900 mb-2">More Than Just a School</h4>
-                <p className="text-gray-700 text-justify">TBEC is an institution where young lives are shepherded to secure their excellence for the future.</p>
+                <p className="text-gray-700 text-left md:text-justify">TBEC is an institution where young lives are shepherded to secure their excellence for the future.</p>
               </div>
               <div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl p-6 shadow-xl">
                 <p className="text-xl font-bold mb-2">You have nothing to fear!</p>
@@ -450,7 +450,7 @@ function App() {
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto text-justify">
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto text-left md:text-justify">
               Reach out to us today. We're ready to meet you at the very point of your need.
             </p>
           </div>
@@ -604,7 +604,7 @@ function App() {
                   {/* Introduction */}
                   <div className="bg-gradient-to-br from-orange-50 to-yellow-50 border-l-4 border-orange-500 p-6 rounded-xl">
                     <h4 className="text-xl font-bold text-blue-900 mb-3">Why Remote Learning at TBEC?</h4>
-                    <p className="text-gray-700 leading-relaxed text-justify">
+                    <p className="text-gray-700 leading-relaxed text-left md:text-justify">
                       At TBEC, we understand that quality education should be accessible to every child, regardless of location. Our remote learning system is specifically designed to provide the same level of personalized attention and educational excellence that you'd expect from traditional classroom settings.
                     </p>
                   </div>
@@ -620,7 +620,7 @@ function App() {
                         </div>
                         <div>
                           <h5 className="font-bold text-blue-900 mb-2">One-on-One Video Sessions</h5>
-                          <p className="text-gray-700 text-justify">
+                          <p className="text-gray-700 text-left md:text-justify">
                             Each child receives dedicated attention through live video sessions with Teacher Alice. This personalized approach ensures that your child's specific learning challenges are addressed effectively.
                           </p>
                         </div>
@@ -634,7 +634,7 @@ function App() {
                         </div>
                         <div>
                           <h5 className="font-bold text-blue-900 mb-2">Customized Learning Plans</h5>
-                          <p className="text-gray-700 text-justify">
+                          <p className="text-gray-700 text-left md:text-justify">
                             We create tailored learning programs that target your child's unique needs—whether it's reading difficulties, writing challenges, or speech impediments. Progress is tracked and plans are adjusted to ensure continuous improvement.
                           </p>
                         </div>
@@ -648,7 +648,7 @@ function App() {
                         </div>
                         <div>
                           <h5 className="font-bold text-blue-900 mb-2">Interactive Learning Materials</h5>
-                          <p className="text-gray-700 text-justify">
+                          <p className="text-gray-700 text-left md:text-justify">
                             We provide engaging digital resources and activities that make learning fun and effective. Parents receive guidance on how to support their child's learning journey at home.
                           </p>
                         </div>
@@ -662,7 +662,7 @@ function App() {
                         </div>
                         <div>
                           <h5 className="font-bold text-blue-900 mb-2">Flexible Scheduling</h5>
-                          <p className="text-gray-700 text-justify">
+                          <p className="text-gray-700 text-left md:text-justify">
                             Our remote system allows for flexible scheduling that fits into your family's routine, making it easier to balance education with other commitments without compromising on quality.
                           </p>
                         </div>
@@ -673,25 +673,25 @@ function App() {
                   {/* Business Alignment */}
                   <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-600 p-6 rounded-xl">
                     <h4 className="text-xl font-bold text-blue-900 mb-3">Why This Aligns With Our Mission</h4>
-                    <p className="text-gray-700 leading-relaxed mb-3 text-justify">
+                    <p className="text-gray-700 leading-relaxed mb-3 text-left md:text-justify">
                       Our remote learning strategy perfectly aligns with TBEC's mission to ensure that every child between the ages of 3-6 receives the attention they need to excel. By operating remotely, we can:
                     </p>
                     <ul className="space-y-2 text-gray-700">
                       <li className="flex items-start">
                         <div className="w-2 h-2 bg-blue-600 rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                        <span className="text-justify">Reach more families who might not have access to quality specialized education in their area</span>
+                        <span className="text-left md:text-justify">Reach more families who might not have access to quality specialized education in their area</span>
                       </li>
                       <li className="flex items-start">
                         <div className="w-2 h-2 bg-blue-600 rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                        <span className="text-justify">Provide consistent, focused attention that addresses each child's cognitive, affective, and psychomotor development</span>
+                        <span className="text-left md:text-justify">Provide consistent, focused attention that addresses each child's cognitive, affective, and psychomotor development</span>
                       </li>
                       <li className="flex items-start">
                         <div className="w-2 h-2 bg-blue-600 rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                        <span className="text-justify">Maintain the same high standards of educational excellence regardless of physical location</span>
+                        <span className="text-left md:text-justify">Maintain the same high standards of educational excellence regardless of physical location</span>
                       </li>
                       <li className="flex items-start">
                         <div className="w-2 h-2 bg-blue-600 rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                        <span className="text-justify">Keep costs accessible while delivering premium educational services</span>
+                        <span className="text-left md:text-justify">Keep costs accessible while delivering premium educational services</span>
                       </li>
                     </ul>
                   </div>
@@ -702,7 +702,7 @@ function App() {
                       <MapPin className="w-6 h-6 flex-shrink-0 mt-1" />
                       <div>
                         <h4 className="text-xl font-bold mb-3">Interested in Physical Classes?</h4>
-                        <p className="leading-relaxed mb-4 text-justify">
+                        <p className="leading-relaxed mb-4 text-left md:text-justify">
                           While we primarily operate remotely to maximize accessibility and flexibility, we understand that some families prefer in-person instruction. Physical classes can be arranged on a case-by-case basis to meet your specific needs.
                         </p>
                         <p className="font-semibold mb-3">
@@ -752,7 +752,7 @@ function App() {
                 className="h-12 w-auto mb-4"
               />
               <p className="text-blue-200 mb-2 font-semibold">The Balanced Educational Citadel</p>
-              <p className="text-blue-300 text-sm text-justify">
+              <p className="text-blue-300 text-sm text-left md:text-justify">
                 Securing excellence in young children between the ages of 3-6 years old
               </p>
             </div>
