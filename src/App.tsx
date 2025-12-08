@@ -9,9 +9,10 @@ function App() {
     message: ''
   });
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [remoteModalOpen, setRemoteModalOpen] = useState(false);
 
   useEffect(() => {
-    if (mobileMenuOpen) {
+    if (mobileMenuOpen || remoteModalOpen) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
@@ -19,7 +20,7 @@ function App() {
     return () => {
       document.body.style.overflow = 'unset';
     };
-  }, [mobileMenuOpen]);
+  }, [mobileMenuOpen, remoteModalOpen]);
 
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
@@ -488,7 +489,10 @@ function App() {
                       <p className="text-blue-100 mb-3 leading-relaxed">
                         We run a fully remote system, physical classes can be arranged when necessary
                       </p>
-                      <button className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:shadow-lg transition transform hover:scale-105">
+                      <button
+                        onClick={() => setRemoteModalOpen(true)}
+                        className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:shadow-lg transition transform hover:scale-105"
+                      >
                         Read More
                       </button>
                     </div>
@@ -559,6 +563,183 @@ function App() {
           </div>
         </div>
       </section>
+
+      {/* Remote Learning Modal */}
+      {remoteModalOpen && (
+        <>
+          <div
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 transition-opacity duration-300"
+            onClick={() => setRemoteModalOpen(false)}
+          />
+          <div className="fixed inset-0 z-50 overflow-y-auto">
+            <div className="flex min-h-full items-center justify-center p-4">
+              <div
+                className="relative bg-white rounded-3xl shadow-2xl max-w-3xl w-full mx-auto transform transition-all duration-300 animate-in"
+                onClick={(e) => e.stopPropagation()}
+              >
+                {/* Close Button */}
+                <button
+                  onClick={() => setRemoteModalOpen(false)}
+                  className="absolute top-6 right-6 bg-gray-100 hover:bg-gray-200 text-gray-600 p-3 rounded-xl transition-colors z-10"
+                  aria-label="Close modal"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+
+                {/* Modal Header */}
+                <div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white p-8 rounded-t-3xl">
+                  <div className="flex items-center space-x-4 mb-4">
+                    <div className="bg-white/20 backdrop-blur p-3 rounded-xl">
+                      <GraduationCap className="w-8 h-8" />
+                    </div>
+                    <div>
+                      <h3 className="text-3xl font-bold">Our Remote Learning Strategy</h3>
+                      <p className="text-blue-100 text-lg">Bringing Excellence to Your Doorstep</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Modal Content */}
+                <div className="p-8 space-y-6 max-h-[60vh] overflow-y-auto">
+                  {/* Introduction */}
+                  <div className="bg-gradient-to-br from-orange-50 to-yellow-50 border-l-4 border-orange-500 p-6 rounded-xl">
+                    <h4 className="text-xl font-bold text-blue-900 mb-3">Why Remote Learning at TBEC?</h4>
+                    <p className="text-gray-700 leading-relaxed text-justify">
+                      At TBEC, we understand that quality education should be accessible to every child, regardless of location. Our remote learning system is specifically designed to provide the same level of personalized attention and educational excellence that you'd expect from traditional classroom settings.
+                    </p>
+                  </div>
+
+                  {/* Key Features */}
+                  <div className="space-y-4">
+                    <h4 className="text-2xl font-bold text-blue-900">How Our Remote System Works</h4>
+
+                    <div className="bg-white border-2 border-cyan-200 rounded-xl p-5 hover:shadow-lg transition">
+                      <div className="flex items-start space-x-4">
+                        <div className="bg-cyan-500 p-2 rounded-lg flex-shrink-0">
+                          <Users className="w-6 h-6 text-white" />
+                        </div>
+                        <div>
+                          <h5 className="font-bold text-blue-900 mb-2">One-on-One Video Sessions</h5>
+                          <p className="text-gray-700 text-justify">
+                            Each child receives dedicated attention through live video sessions with Teacher Alice. This personalized approach ensures that your child's specific learning challenges are addressed effectively.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="bg-white border-2 border-blue-200 rounded-xl p-5 hover:shadow-lg transition">
+                      <div className="flex items-start space-x-4">
+                        <div className="bg-blue-600 p-2 rounded-lg flex-shrink-0">
+                          <Target className="w-6 h-6 text-white" />
+                        </div>
+                        <div>
+                          <h5 className="font-bold text-blue-900 mb-2">Customized Learning Plans</h5>
+                          <p className="text-gray-700 text-justify">
+                            We create tailored learning programs that target your child's unique needs—whether it's reading difficulties, writing challenges, or speech impediments. Progress is tracked and plans are adjusted to ensure continuous improvement.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="bg-white border-2 border-orange-200 rounded-xl p-5 hover:shadow-lg transition">
+                      <div className="flex items-start space-x-4">
+                        <div className="bg-orange-500 p-2 rounded-lg flex-shrink-0">
+                          <BookOpen className="w-6 h-6 text-white" />
+                        </div>
+                        <div>
+                          <h5 className="font-bold text-blue-900 mb-2">Interactive Learning Materials</h5>
+                          <p className="text-gray-700 text-justify">
+                            We provide engaging digital resources and activities that make learning fun and effective. Parents receive guidance on how to support their child's learning journey at home.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="bg-white border-2 border-yellow-200 rounded-xl p-5 hover:shadow-lg transition">
+                      <div className="flex items-start space-x-4">
+                        <div className="bg-yellow-500 p-2 rounded-lg flex-shrink-0">
+                          <Heart className="w-6 h-6 text-white" />
+                        </div>
+                        <div>
+                          <h5 className="font-bold text-blue-900 mb-2">Flexible Scheduling</h5>
+                          <p className="text-gray-700 text-justify">
+                            Our remote system allows for flexible scheduling that fits into your family's routine, making it easier to balance education with other commitments without compromising on quality.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Business Alignment */}
+                  <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-600 p-6 rounded-xl">
+                    <h4 className="text-xl font-bold text-blue-900 mb-3">Why This Aligns With Our Mission</h4>
+                    <p className="text-gray-700 leading-relaxed mb-3 text-justify">
+                      Our remote learning strategy perfectly aligns with TBEC's mission to ensure that every child between the ages of 3-6 receives the attention they need to excel. By operating remotely, we can:
+                    </p>
+                    <ul className="space-y-2 text-gray-700">
+                      <li className="flex items-start">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                        <span className="text-justify">Reach more families who might not have access to quality specialized education in their area</span>
+                      </li>
+                      <li className="flex items-start">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                        <span className="text-justify">Provide consistent, focused attention that addresses each child's cognitive, affective, and psychomotor development</span>
+                      </li>
+                      <li className="flex items-start">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                        <span className="text-justify">Maintain the same high standards of educational excellence regardless of physical location</span>
+                      </li>
+                      <li className="flex items-start">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                        <span className="text-justify">Keep costs accessible while delivering premium educational services</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  {/* Physical Classes Note */}
+                  <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white p-6 rounded-xl">
+                    <div className="flex items-start space-x-4">
+                      <MapPin className="w-6 h-6 flex-shrink-0 mt-1" />
+                      <div>
+                        <h4 className="text-xl font-bold mb-3">Interested in Physical Classes?</h4>
+                        <p className="leading-relaxed mb-4 text-justify">
+                          While we primarily operate remotely to maximize accessibility and flexibility, we understand that some families prefer in-person instruction. Physical classes can be arranged on a case-by-case basis to meet your specific needs.
+                        </p>
+                        <p className="font-semibold mb-3">
+                          To inquire about physical class arrangements:
+                        </p>
+                        <a
+                          href="#contact"
+                          onClick={(e) => {
+                            handleSmoothScroll(e, 'contact');
+                            setRemoteModalOpen(false);
+                          }}
+                          className="inline-block bg-white text-orange-600 px-6 py-3 rounded-xl font-bold hover:shadow-xl transition transform hover:scale-105"
+                        >
+                          Send Us a Message
+                        </a>
+                        <p className="text-sm mt-3 text-orange-100">
+                          Fill in your details using our contact form below, and we'll reach out to discuss how we can accommodate your preferences.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Modal Footer */}
+                <div className="bg-gray-50 p-6 rounded-b-3xl flex justify-end">
+                  <button
+                    onClick={() => setRemoteModalOpen(false)}
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition transform hover:scale-105"
+                  >
+                    Got It!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </>
+      )}
 
       {/* Footer */}
       <footer className="bg-blue-950 text-white py-12 px-4 sm:px-6 lg:px-8">
