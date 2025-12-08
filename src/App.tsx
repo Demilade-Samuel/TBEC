@@ -181,7 +181,7 @@ function App() {
                 <br />
                 <span className="text-orange-500">Big Possibilities</span>
               </h1>
-              <p className="text-xl text-blue-800 leading-relaxed text-left md:text-justify">
+              <p className="text-xl text-blue-800 leading-relaxed text-left">
                 Building a strong foundation through fun and learning for children ages 3-6 years old
               </p>
               <div className="flex flex-wrap gap-4">
@@ -253,7 +253,7 @@ function App() {
             <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
               Challenges We Solve
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto text-left md:text-justify">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto text-left">
               TBEC specializes in helping children overcome these common learning obstacles
             </p>
           </div>
@@ -334,7 +334,7 @@ function App() {
             <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
               Our Services
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto text-left md:text-justify">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto text-left">
               We offer flexible options to meet your child's unique needs
             </p>
           </div>
@@ -399,7 +399,7 @@ function App() {
             <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
               Why Choose TBEC?
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto text-left md:text-justify">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto text-left">
               TBEC is your best shot for securing your child's educational excellence
             </p>
           </div>
@@ -420,19 +420,19 @@ function App() {
             <div className="space-y-6 order-1 md:order-2">
               <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
                 <h4 className="text-xl font-bold text-blue-900 mb-2">Nearly a Decade of Experience</h4>
-                <p className="text-gray-700 text-left md:text-justify">Teacher Alice brings years of expertise in early childhood education and special needs learning.</p>
+                <p className="text-gray-700 text-left">Teacher Alice brings years of expertise in early childhood education and special needs learning.</p>
               </div>
               <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
                 <h4 className="text-xl font-bold text-blue-900 mb-2">Proven Methods</h4>
-                <p className="text-gray-700 text-left md:text-justify">We employ recent and proven educational methods designed specifically for children ages 3-6.</p>
+                <p className="text-gray-700 text-left">We employ recent and proven educational methods designed specifically for children ages 3-6.</p>
               </div>
               <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
                 <h4 className="text-xl font-bold text-blue-900 mb-2">Holistic Development</h4>
-                <p className="text-gray-700 text-left md:text-justify">We focus on cognitive, affective, and psychomotor development for well-rounded growth.</p>
+                <p className="text-gray-700 text-left">We focus on cognitive, affective, and psychomotor development for well-rounded growth.</p>
               </div>
               <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
                 <h4 className="text-xl font-bold text-blue-900 mb-2">More Than Just a School</h4>
-                <p className="text-gray-700 text-left md:text-justify">TBEC is an institution where young lives are shepherded to secure their excellence for the future.</p>
+                <p className="text-gray-700 text-left">TBEC is an institution where young lives are shepherded to secure their excellence for the future.</p>
               </div>
               <div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl p-6 shadow-xl">
                 <p className="text-xl font-bold mb-2">You have nothing to fear!</p>
@@ -450,7 +450,7 @@ function App() {
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto text-left md:text-justify">
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto text-left">
               Reach out to us today. We're ready to meet you at the very point of your need.
             </p>
           </div>
@@ -752,7 +752,7 @@ function App() {
                 className="h-12 w-auto mb-4"
               />
               <p className="text-blue-200 mb-2 font-semibold">The Balanced Educational Citadel</p>
-              <p className="text-blue-300 text-sm text-left md:text-justify">
+              <p className="text-blue-300 text-sm text-left">
                 Securing excellence in young children between the ages of 3-6 years old
               </p>
             </div>
