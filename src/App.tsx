@@ -236,7 +236,7 @@ function App() {
                 This discovery sparked a special calling in her spirit—to provide real solutions for children between the ages of 3 and 6 years old. TBEC was born from this mission.
               </p>
               <div className="bg-cyan-50 border-l-4 border-cyan-500 p-6 rounded-lg">
-                <p className="text-blue-900 font-semibold italic">
+                <p className="text-blue-900 font-semibold italic text-justify">
                   "I am committed to ensuring that the cognitive, affective, and psychomotor capabilities of every child are skillfully shepherded, leading to all-round excellent educational performance."
                 </p>
                 <p className="text-cyan-700 font-medium mt-2">- Teacher Alice Salami</p>
