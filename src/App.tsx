@@ -459,12 +459,15 @@ function App() {
                 <h3 className="text-2xl font-bold mb-6">Get In Touch</h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-4">
-                    <div className="bg-cyan-500 p-3 rounded-xl">
+                    <a href="tel:07064567059" className="bg-cyan-500 p-3 rounded-xl hover:bg-cyan-600 transition-colors cursor-pointer">
                       <Phone className="w-6 h-6" />
-                    </div>
+                    </a>
                     <div>
                       <p className="font-semibold">Phone</p>
-                      <p className="text-blue-100">Contact us for our number</p>
+                      <div className="text-blue-100">
+                        <p>07064567059</p>
+                        <p>07062409018</p>
+                      </div>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">
