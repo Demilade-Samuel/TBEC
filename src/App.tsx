@@ -37,10 +37,10 @@ function App() {
 
 
 
-  async function handleSubmit(event) {
-  event.preventDefault();
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
 
-  const form = event.currentTarget;
+  const form = e.currentTarget;
   const data = new FormData(form);
 
   try {
@@ -51,17 +51,22 @@ function App() {
     });
 
     if (res.ok) {
-      // Optional: clear the controlled inputs after success
+      alert("Thank you for reaching out! We will contact you soon.");
       setFormData({ name: "", email: "", phone: "", message: "" });
     } else {
       const result = await res.json().catch(() => null);
       console.error("Formspree error:", result);
+      // Optional: alert for failure (remove if you don't want any UI change on failure)
+      // alert("Sorry — something went wrong. Please try again.");
     }
   } catch (err) {
     console.error("Network error:", err);
+    // Optional: alert for network error
+    // alert("Network error — please check your connection and try again.");
   }
-}
+};
 
+  
 
   return (
     <div className="min-h-screen bg-white">
