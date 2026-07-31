@@ -35,38 +35,11 @@ function App() {
     closeMobileMenu();
   };
 
-
-
-const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
-
-  const form = e.currentTarget;
-  const data = new FormData(form);
-
-  try {
-    const res = await fetch(form.action, {
-      method: form.method,
-      body: data,
-      headers: { Accept: "application/json" },
-    });
-
-    if (res.ok) {
-      alert("Thank you for reaching out! We will contact you soon.");
-      setFormData({ name: "", email: "", phone: "", message: "" });
-    } else {
-      const result = await res.json().catch(() => null);
-      console.error("Formspree error:", result);
-      // Optional: alert for failure (remove if you don't want any UI change on failure)
-      // alert("Sorry — something went wrong. Please try again.");
-    }
-  } catch (err) {
-    console.error("Network error:", err);
-    // Optional: alert for network error
-    // alert("Network error — please check your connection and try again.");
-  }
-};
-
-  
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    alert('Thank you for reaching out! We will contact you soon.');
+    setFormData({ name: '', email: '', phone: '', message: '' });
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -534,74 +507,58 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
             </div>
             <div className="bg-white rounded-3xl p-8 shadow-2xl">
               <h3 className="text-2xl font-bold text-blue-900 mb-6">Send Us a Message</h3>
-             
-
-<form
-  onSubmit={handleSubmit}
-  action="https://formspree.io/f/mnjjnkng"
-  method="POST"
-  className="space-y-4"
->
-  <div>
-    <label className="block text-sm font-semibold text-gray-700 mb-2">Your Name</label>
-    <input
-      name="name"
-      type="text"
-      required
-      value={formData.name}
-      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-      className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-cyan-500 focus:outline-none text-gray-900"
-      placeholder="Parent/Guardian Name"
-    />
-  </div>
-
-  <div>
-    <label className="block text-sm font-semibold text-gray-700 mb-2">Your Email</label>
-    <input
-      name="email"
-      type="email"
-      required
-      value={formData.email}
-      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-      className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-cyan-500 focus:outline-none text-gray-900"
-      placeholder="your@email.com"
-    />
-  </div>
-
-  <div>
-    <label className="block text-sm font-semibold text-gray-700 mb-2">Phone Number</label>
-    <input
-      name="phone"
-      type="tel"
-      required
-      value={formData.phone}
-      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-      className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-cyan-500 focus:outline-none text-gray-900"
-      placeholder="Your phone number"
-    />
-  </div>
-
-  <div>
-    <label className="block text-sm font-semibold text-gray-700 mb-2">Message</label>
-    <textarea
-      name="message"
-      required
-      value={formData.message}
-      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-      rows={4}
-      className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-cyan-500 focus:outline-none text-gray-900"
-      placeholder="Tell us about your child's needs..."
-    />
-  </div>
-
-  <button
-    type="submit"
-    className="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white py-4 rounded-xl font-bold text-lg hover:shadow-2xl transition transform hover:scale-105"
-  >
-    Send Message
-  </button>
-</form>
-
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">Your Name</label>
+                  <input
+                    type="text"
+                    required
+                    value={formData.name}
+                    onChange={(e) => setFormData({...formData, name: e.target.value})}
+                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-cyan-500 focus:outline-none text-gray-900"
+                    placeholder="Parent/Guardian Name"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">Your Email</label>
+                  <input
+                    type="email"
+                    required
+                    value={formData.email}
+                    onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-cyan-500 focus:outline-none text-gray-900"
+                    placeholder="your@email.com"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">Phone Number</label>
+                  <input
+                    type="tel"
+                    required
+                    value={formData.phone}
+                    onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-cyan-500 focus:outline-none text-gray-900"
+                    placeholder="Your phone number"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">Message</label>
+                  <textarea
+                    required
+                    value={formData.message}
+                    onChange={(e) => setFormData({...formData, message: e.target.value})}
+                    rows={4}
+                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-cyan-500 focus:outline-none text-gray-900"
+                    placeholder="Tell us about your child's needs..."
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white py-4 rounded-xl font-bold text-lg hover:shadow-2xl transition transform hover:scale-105"
+                >
+                  Send Message
+                </button>
+              </form>
             </div>
           </div>
         </div>
